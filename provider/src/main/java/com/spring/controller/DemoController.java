@@ -5,7 +5,11 @@ package com.spring.controller;
 import com.spring.service.URLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,7 +47,7 @@ public class DemoController {
      * @param shortURL
      * @return 原始链接
      */
-    @RequestMapping(value = "/{shortURL}", method = RequestMethod.GET)
+    @RequestMapping(value = "/query/{shortURL}", method = RequestMethod.GET)
     public Map<String, String> redirect(@PathVariable("shortURL") String shortURL){
         String initialURL = urlService.queryRealURL(shortURL);
         Map<String, String> map = new HashMap<String, String>();
@@ -51,6 +55,15 @@ public class DemoController {
         return map;
     }
 
+    @RequestMapping(value = "/{shortURL}", method = RequestMethod.GET)
+    public ModelAndView get(HttpServletResponse response,
+                            @PathVariable("shortURL") String shortURL) throws IOException {
+        String url = urlService.queryRealURL(shortURL);
+//        response.sendRedirect(url);
+//        return new RedirectView(url);
+        return new ModelAndView("redirect:" + url);
+
+    }
 
 
 }
