@@ -12,7 +12,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  * 布隆过滤器
  * 支持AOF持久化
  * 通过配置MAX_PIECE_AOF_QUEUE参数调整持久化的频率
- * @param <E> 布隆判断的数据类型
+ * @param <E>  布隆判断的数据类型
  */
 public class BloomFilterAOFable<E> extends BloomFilter {
 
