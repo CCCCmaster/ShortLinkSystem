@@ -1,5 +1,7 @@
 package com.spring;
 
+import com.netflix.discovery.DiscoveryClient;
+import com.netflix.discovery.endpoint.EndpointUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +14,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableAutoConfiguration
 @EnableCaching // 开启缓存
 public class ProviderApplication {
+
+//    DiscoveryClient
+//    EndpointUtils
 
     public static void main(String[] args) {
 

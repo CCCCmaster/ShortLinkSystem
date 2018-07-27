@@ -46,6 +46,7 @@ public class LRUCache<K, V> extends HashMap {
      * @param key 键
      * @return V 值
      */
+    @SuppressWarnings("unchecked")
     public V getCache(K key){
         return (V) this.get(key);
     }
