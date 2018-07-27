@@ -10,8 +10,8 @@ public class PECode {
 
     /**
      * 10进制转62进制
-     * @param number
-     * @return
+     * @param number 10进制
+     * @return String 32进制
      */
     public static String _10_to_62(int number){
         Integer rest=number;
@@ -30,8 +30,8 @@ public class PECode {
 
     /**
      * 62进制转10进制
-     * @param sixty_str
-     * @return
+     * @param sixty_str 62进制
+     * @return int 10进制
      */
     public static int _62_to_10(String sixty_str){
         int multiple=1;
