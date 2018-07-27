@@ -42,6 +42,7 @@ public class PECode {
             result+=_62_value(c)*multiple;
             multiple=multiple*62;
         }
+
         return result;
     }
 
