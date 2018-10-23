@@ -17,6 +17,9 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import java.util.List;
 
 
+/**
+ * Redis配置类
+ */
 @Configuration
 public class RedisConfig extends CachingConfigurerSupport{
 
@@ -79,7 +82,7 @@ public class RedisConfig extends CachingConfigurerSupport{
      * 设置添加序列化器
      * key 使用string序列化器
      * value 使用Json序列化器
-     * 还有一种简答的设置方式，改变defaultSerializer对象的实现。
+     * 还有一种简单的设置方式，改变defaultSerializer对象的实现。
      *
      * @return
      */
