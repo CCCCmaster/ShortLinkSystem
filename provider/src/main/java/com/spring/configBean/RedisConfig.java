@@ -29,6 +29,7 @@ public class RedisConfig extends CachingConfigurerSupport{
     @Value("${spring.redis.port}")
     private int port;
 
+    /*  测试  */
     @Value("${spring.redis.timeout}")
     private int timeout;
 
