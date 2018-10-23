@@ -18,7 +18,6 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-
     <dependencies>
 
         <!-- Boot Web -->
