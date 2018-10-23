@@ -33,6 +33,8 @@ public class RedisConfig extends CachingConfigurerSupport{
     @Value("${spring.redis.timeout}")
     private int timeout;
 
+
+    /*  数据库  */
     @Value("${spring.redis.database}")
     private int database;
 
